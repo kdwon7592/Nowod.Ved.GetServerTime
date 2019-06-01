@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "965991732792",
+    "firebase_url": "https://nowodved.firebaseio.com",
+    "project_id": "nowodved",
+    "storage_bucket": "nowodved.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965991732792:android:b9cc2c4346de5439",
+        "android_client_info": {
+          "package_name": "com.nowod.ved.getservertime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965991732792-cu4lddr31et5pvqu7mpoejncn80lochn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCweePRPJfljgQR-9jPB11FvPy8zk7iGTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965991732792-cu4lddr31et5pvqu7mpoejncn80lochn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
