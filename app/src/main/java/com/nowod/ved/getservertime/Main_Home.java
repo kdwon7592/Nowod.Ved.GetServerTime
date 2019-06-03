@@ -72,7 +72,12 @@ public class Main_Home extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 try {
-                    Log.d("test", response.headers().get("date"));
+                    long requestTime = response.raw().sentRequestAtMillis();
+                    long responseTime = response.raw().receivedResponseAtMillis();
+                    long apiTime = responseTime - requestTime;
+                    Log.d("server_time", response.headers().get("date"));
+                    Log.d("response_time", String.valueOf(apiTime));
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
