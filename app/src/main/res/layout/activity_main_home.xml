@@ -35,6 +35,23 @@
             app:mt_hint="서버 주소를 검색하세요"
             app:mt_maxSuggestionsCount="10"
             app:mt_speechMode="false" />
+
+        <TextView
+            android:id="@+id/tvServerUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorMainText" />
+
+        <TextView
+            android:id="@+id/tvServerTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorMainText"
+            android:textSize="24sp" />
     </LinearLayout>
 
 </RelativeLayout>

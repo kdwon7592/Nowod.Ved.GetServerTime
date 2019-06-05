@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>server_time_version</key>
+        <value>3.0.3</value>
+    </entry>
+    <entry>
+        <key>server_time_market_url</key>
+        <value>https://play.google.com/store/apps/details?id=webgamja.supermen</value>
+    </entry>
+</defaultsMap>
