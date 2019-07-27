@@ -38,25 +38,38 @@
             android:layout_marginTop="50dp"
             android:text="URL 직접 입력하기" />
 
+        <Button
+            android:id="@+id/requestBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:text="학교 추가/수정 요청"
+            android:textSize="12sp" />
+
         <TextView
             android:id="@+id/tvServerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/tvServerUrl"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="213dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center_vertical|center_horizontal"
             android:text="서버를 검색해보세요!"
-            android:textColor="@color/colorMainText" />
+            android:textColor="@color/colorMainText"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/tvServerUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvServerName"
+            android:layout_above="@+id/tvServerTime"
             android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
             android:gravity="center_vertical|center_horizontal"
-            android:textColor="@color/colorMainText" />
+            android:textColor="@color/colorMainText"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/tvServerTime"
@@ -67,8 +80,9 @@
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:gravity="center_vertical|center_horizontal"
-            android:textColor="@color/colorMainText"
-            android:textSize="24sp" />
+            android:textColor="@color/colorUrlText"
+            android:textSize="32sp"
+            android:textStyle="normal" />
     </RelativeLayout>
 
 </RelativeLayout>

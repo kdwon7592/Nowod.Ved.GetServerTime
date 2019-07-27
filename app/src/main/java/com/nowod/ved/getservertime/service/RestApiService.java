@@ -7,6 +7,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 import static com.nowod.ved.getservertime.util.Global.INSERT_DATA;
+import static com.nowod.ved.getservertime.util.Global.INSERT_REQUEST;
 import static com.nowod.ved.getservertime.util.Global.SELECT_DATA;
 import static com.nowod.ved.getservertime.util.Global.SELECT_URL;
 
@@ -25,5 +26,12 @@ public interface RestApiService {
     @GET(SELECT_URL)
     Call<ResponseBody> select_url(
             @Query("keyword") String keyword
+    );
+
+    @POST(INSERT_REQUEST)
+    Call<ResponseBody> insert_request(
+            @Query("name") String name,
+            @Query("url")  String url,
+            @Query("request") String request
     );
 }

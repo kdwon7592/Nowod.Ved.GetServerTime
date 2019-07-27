@@ -79,11 +79,9 @@ public class Intro extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             boolean updated = task.getResult();
                             Log.d(TAG, "Config params updated: " + updated);
-                            Toast.makeText(activity, "Fetch and activate succeeded",
-                                    Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(activity, "Fetch failed",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activity, "에러 발생",
+                                    Toast.LENGTH_LONG).show();
                         }
                         try {
                             currentVersion = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;

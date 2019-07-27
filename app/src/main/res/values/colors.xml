@@ -5,4 +5,6 @@
     <color name="colorAccent">#32435F</color>
     <color name="colorBackGround">#035a37</color>
     <color name="colorMainText">#ffffff</color>
+    <color name="colorUrlText">#F6E89C</color>
+    <color name="transparentWhite">#6cffffff</color>
 </resources>

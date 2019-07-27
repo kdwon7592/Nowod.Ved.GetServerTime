@@ -72,6 +72,7 @@ public class Main_Home extends AppCompatActivity {
     @BindView(R.id.tvServerUrl)     TextView tvServerUrl;
     @BindView(R.id.tvServerName)    TextView tvServerName;
     @BindView(R.id.inputChangeBtn)  Button inputChangeBtn;
+    @BindView(R.id.requestBtn)      Button requestBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +83,14 @@ public class Main_Home extends AppCompatActivity {
         setInit();
         setEvent();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setInit();
+        setEvent();
+    }
+
 
     public void setInit(){
         activity = Main_Home.this;
@@ -184,15 +193,11 @@ public class Main_Home extends AppCompatActivity {
     @OnClick(R.id.inputChangeBtn)
     public void onClick() {
         if(!isUrlSearch) {
-            searchBar.setBackgroundColor(Color.parseColor("#a0a0a0"));
-            searchBar.setQueryTextColor(Color.parseColor("#000000"));
             searchBar.setSearchHint("주소를 입력해주세요. 예)http://test.com");
             searchBar.clearQuery();
             inputChangeBtn.setText("학교 검색하기");
             isUrlSearch = true;
         } else {
-            searchBar.setBackgroundColor(Color.WHITE);
-            searchBar.setQueryTextColor(Color.BLACK);
             searchBar.setSearchHint("학교이름을 입력해주세요.");
             searchBar.clearQuery();
             inputChangeBtn.setText("URL 직접 입력하기");
@@ -200,6 +205,11 @@ public class Main_Home extends AppCompatActivity {
         }
     }
 
+    @OnClick(R.id.requestBtn)
+    public void onClickRequest() {
+        Intent intent = new Intent(activity, Request.class);
+        startActivity(intent);
+    }
 
     private void getServerData(){
         mRetrofit = new Retrofit.Builder()
@@ -233,6 +243,7 @@ public class Main_Home extends AppCompatActivity {
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Log.d("fail", "fail");
+                Log.d("exception", t.getMessage());
             }
         });
     }
@@ -334,7 +345,7 @@ public class Main_Home extends AppCompatActivity {
 
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Toast.makeText(activity, "URL입력이 잘못되었습니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "URL입력이 잘못되었습니다.", Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -345,7 +356,7 @@ public class Main_Home extends AppCompatActivity {
             });
         }catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(activity, "URL입력이 잘못되었습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "URL입력이 잘못되었습니다.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -382,7 +393,7 @@ public class Main_Home extends AppCompatActivity {
 
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Toast.makeText(activity, "지원되지 않는 학교입니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "지원되지 않는 학교입니다.", Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -430,7 +441,7 @@ public class Main_Home extends AppCompatActivity {
 
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Toast.makeText(activity, "지원되지 않는 학교입니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "지원되지 않는 학교입니다.", Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -441,7 +452,7 @@ public class Main_Home extends AppCompatActivity {
             });
         }catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(activity, "지원되지 않는 학교입니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "지원되지 않는 학교입니다.", Toast.LENGTH_LONG).show();
         }
     }
 
